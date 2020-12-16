@@ -9,57 +9,106 @@
 <body>
 
     <header id="main-header">
-        <nav>
-            <h1>myBookshelf</h1>
+        <nav class="container">
+            <div id="logo">
+                <img src="images/more-books.svg" alt="">
+                <h1>myBookshelf</h1>
+            </div>
             <ul>
-                <li>My listings</li>
-                <li>Books read</li>
-                <li>Pending</li>
+                <li class="selected">My listings</li>
+                <li class="">Books read</li>
+                <li class="">Pending</li>
             </ul>
         </nav>
     </header>
 
     <main id="main-content">
-        <button id="add-btn">Add book</button>
-        <div id="books-wrapper">
-            <div class="book-item">
-                <header class="book-title">
-                    <h2>Title</h1>
-                    <p>Author</p>
-                </header>
-                <section class="book-cover">
-                    <img src="..." alt="No cover avalaible">
-                </section>
-                <footer class="book-footer">
-                    <p>Read status:</p>
-                    <button class="read-btn"></button>
-                </footer>
+        <div class="container">
+            <button id="add-btn">Add book</button>
+            <div id="books-wrapper">
+                <div class="book-item">
+                    <header class="book-title">
+                        <div class="title">
+                            <h2>Title</h1>
+                        </div>
+                        <div class="author">
+                            <p>Author</p>
+                        </div>
+                        <div class="edit">
+                            <button class="icon-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5L13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175l-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </header>
+                    <section class="book-cover">
+                        <img src="..." alt="No cover avalaible">
+                    </section>
+                    <footer class="book-footer">
+                        <p>284 pages</p>
+                        <p>Not read</p>
+                    </footer>
+                </div>
             </div>
         </div>
     </main>
 
-    <section id="add-form-bg">
+    <section class="form-bg" style="display:none;">
         <form id="add-form" class="form" action="">
+            <div class="icon-btn close-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                    <path fill-rule="evenodd" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                </svg>
+            </div>
             <div class="form-title">
                 <h2>Add a new book</h2>
             </div>
+
             <div class="input-div">
-                <label for="name-input">Title</label>
-                <input type="text" name="" id="name-input" required>
+                <input type="text" name="" id="name-input" placeholder="Title" required>
             </div>
             <div class="input-div">
-                <label for="author-input">Author</label>
-                <input type="text" id="author-input" required>
+                <input type="text" id="author-input" placeholder="Author" required>
             </div>
             <div class="input-div">
-                <label for="pages-input">No. of pages</label>
-                <input type="number" min="1" placeholder="1" id="pages-input" required>
+                <input type="number" min="1" id="pages-input" placeholder="No. pages" required>
             </div>
             <div class="input-div checkbox-div">
                 <label for="read-input">Have you read it already?</label>
                 <input type="checkbox" id="read-input">
             </div>
             <button id="submit-book" class="form-btn">Add to my bookshelf</button>
+        </form>
+    </section>
+
+    <section class="form-bg" style="display:none;">
+        <form id="edit-form" class="form" action="">
+            <div class="icon-btn close-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                    <path fill-rule="evenodd" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                </svg>
+            </div>
+            <div class="form-title">
+                <h2>Edit book</h2>
+            </div>
+
+            <div class="input-div">
+                <input type="text" name="" id="name-input" placeholder="Title" required>
+            </div>
+            <div class="input-div">
+                <input type="text" id="author-input" placeholder="Author" required>
+            </div>
+            <div class="input-div">
+                <input type="number" min="1" id="pages-input" placeholder="No. pages" required>
+            </div>
+            <div class="input-div checkbox-div">
+                <label for="read-input">Have you read it now?</label>
+                <input type="checkbox" id="read-input">
+            </div>
+            <button id="update-book" class="form-btn">Update book</button>
         </form>
     </section>
 

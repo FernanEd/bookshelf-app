@@ -12,6 +12,8 @@ button.addEventListener("click", () => {
 function closeForm(){
     //Fisically close it
 
+
     //Reset animation
     console.log("a");
 }
+
