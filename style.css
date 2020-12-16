@@ -68,7 +68,7 @@ h1, h2, h3, h4, h5, h6{
 
 .form{
     background: var(--light);
-    min-width: 400px;
+    width: 400px;
     padding: 25px;
 
     display: flex;
@@ -170,8 +170,9 @@ h1, h2, h3, h4, h5, h6{
 
 #main-header > nav > ul{
     list-style: none;
-    padding: none;
+    padding: 0;
     display: flex;
+    margin: 0;
 }
 
 #main-header ul > li{
@@ -190,7 +191,7 @@ h1, h2, h3, h4, h5, h6{
     color: var(--primary);
 }
 
-.selected{
+.selected-page{
     color: var(--secondary);
     border-bottom: 1px solid var(--secondary);
 }
@@ -284,4 +285,65 @@ h1, h2, h3, h4, h5, h6{
     display: flex;
     justify-content: space-between;
     color: var(--secondary);
+}
+
+@media (max-width: 720px){
+
+    .container{
+        width: 90%;
+    }
+    
+    #main-header{
+        padding-top: 10px;
+    }
+    
+    #main-header > nav{ 
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+    }
+    
+    #logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin: 10px;
+    }
+    
+    #logo img{
+        width: 34px;
+        height: 34px;
+    }
+    
+    #logo h1{
+        font-size: 32px;
+    }
+    
+    #main-header > nav > ul{
+        display: flex;
+        justify-content: center;
+    }
+    
+    #main-header ul > li{
+        margin: 0px;
+        padding: 5px 10px;
+        width: 100%;
+    }
+
+    #add-btn{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .book-item{
+        width: 100%;
+        min-height: 0;
+    }
+
+    .form{
+        width: 90%;
+    }
+
 }
