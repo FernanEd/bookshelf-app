@@ -24,7 +24,13 @@
 
     <main id="main-content">
         <div class="container">
-            <button id="add-btn">Add book</button>
+            <button id="add-btn" class="btn btn-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                </svg>
+                Add book
+            </button>
             <div id="books-wrapper">
                 <div class="book-item">
                     <header class="book-title">
@@ -79,7 +85,7 @@
                 <label for="read-input">Have you read it already?</label>
                 <input type="checkbox" id="read-input">
             </div>
-            <button id="submit-book" class="form-btn">Add to my bookshelf</button>
+            <button id="submit-book" class="btn btn-primary form-btn">Add to my bookshelf</button>
         </form>
     </section>
 
@@ -108,7 +114,7 @@
                 <label for="read-input">Have you read it now?</label>
                 <input type="checkbox" id="read-input">
             </div>
-            <button id="update-book" class="form-btn">Update book</button>
+            <button id="update-book" class="btn btn-primary form-btn">Update book</button>
         </form>
     </section>
 
