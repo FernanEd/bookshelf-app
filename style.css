@@ -1,19 +1,113 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
 :root{
-    --primary: ;
-    --secondary: ;
-    --success: ;
-    --warning: ;
-    --danger: ;
+    --primary: #118AB2;
+    --secondary: #747371;
+    --success: #06D6A0;
+    --warning: #FFD166;
+    --danger: #EF476F;
+    --light: white;
 }
 
 body{
     margin: 0;
     font-family: "Roboto", sans-serif;
     font-weight: 300;
+    background: var(--light);
 }
 
 h1, h2, h3, h4, h5, h6{
     font-weight: 300;
+}
+
+@keyframes fade-in{
+    0%{ opacity: 0; }
+    25%{ opacity: 0.25; }
+    50%{ opacity: 0.5; }
+    75%{ opacity: 0.75; }
+    100%{ opacity: 1; }
+}
+
+@keyframes popup{
+    0%{ transform: scale(0.01); }
+    20%{ transform: scale(0.15); }
+    40%{ transform: scale(0.25); }
+    60%{ transform: scale(0.50); }
+    80%{ transform: scale(0.75); }
+    100%{ transform: scale(1); }
+}
+
+@keyframes slide-down{
+    0%{ margin-top: 100px; }
+    25%{ margin-top: 75px; }
+    50%{ margin-top: 50px;  }
+    75%{ margin-top: 25px;  }
+    100%{ margin-top: 0px;  }
+}
+
+#add-form-bg{
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0,0,0,0.4);
+
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    animation: fade-in 0.3s forwards;
+}
+
+/* It has a higher z-index because of addform hieritance */
+
+.form{
+    background: var(--light);
+    min-width: 400px;
+    padding: 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+
+    animation: slide-down 0.5s forwards, fade-in 0.5s forwards;
+}
+
+.input-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px 0px;
+    width: 100%;
+}
+
+.checkbox-div{
+    flex-direction: row;
+}
+
+.form-btn{
+    width: 100%;
+    padding: 10px;
+
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--light);
+    background-color:  var(--primary);
+    outline: 0;
+
+    cursor: pointer;
+
+    transition: filter 0.4s ease;
+}
+
+.form-btn:hover{
+    filter: brightness(1.4)
 }

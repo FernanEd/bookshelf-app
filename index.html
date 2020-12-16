@@ -38,17 +38,28 @@
         </div>
     </main>
 
-    <section>
-        <form id="add-form" action="">
-            <label for="name-input">Title</label>
-            <input type="text" name="" id="name-input">
-            <label for="author-input">Author</label>
-            <input type="text" id="author-input">
-            <label for="pages-input">No. of pages</label>
-            <input type="number" min="1" placeholder="1" id="pages-input">
-            <label for="read-input">Have you read it already?</label>
-            <input type="checkbox" id="read-input">
-            <button id="submit-book">Add to my bookshelf</button>
+    <section id="add-form-bg">
+        <form id="add-form" class="form" action="">
+            <div class="form-title">
+                <h2>Add a new book</h2>
+            </div>
+            <div class="input-div">
+                <label for="name-input">Title</label>
+                <input type="text" name="" id="name-input" required>
+            </div>
+            <div class="input-div">
+                <label for="author-input">Author</label>
+                <input type="text" id="author-input" required>
+            </div>
+            <div class="input-div">
+                <label for="pages-input">No. of pages</label>
+                <input type="number" min="1" placeholder="1" id="pages-input" required>
+            </div>
+            <div class="input-div checkbox-div">
+                <label for="read-input">Have you read it already?</label>
+                <input type="checkbox" id="read-input">
+            </div>
+            <button id="submit-book" class="form-btn">Add to my bookshelf</button>
         </form>
     </section>
 
