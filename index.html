@@ -7,8 +7,50 @@
     <title>myBookshelf</title>
 </head>
 <body>
-    <h1>myBookshelf</h1>
 
+    <header id="main-header">
+        <nav>
+            <h1>myBookshelf</h1>
+            <ul>
+                <li>My listings</li>
+                <li>Books read</li>
+                <li>Pending</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <button id="add-btn">Add book</button>
+        <div id="books-wrapper">
+            <div class="book-item">
+                <header class="book-title">
+                    <h2>Title</h1>
+                    <p>Author</p>
+                </header>
+                <section class="book-cover">
+                    <img src="..." alt="No cover avalaible">
+                </section>
+                <footer class="book-footer">
+                    <p>Read status:</p>
+                    <button class="read-btn"></button>
+                </footer>
+            </div>
+        </div>
+    </main>
+
+    <section>
+        <form id="add-form" action="">
+            <label for="name-input">Title</label>
+            <input type="text" name="" id="name-input">
+            <label for="author-input">Author</label>
+            <input type="text" id="author-input">
+            <label for="pages-input">No. of pages</label>
+            <input type="number" min="1" placeholder="1" id="pages-input">
+            <label for="read-input">Have you read it already?</label>
+            <input type="checkbox" id="read-input">
+            <button id="submit-book">Add to my bookshelf</button>
+        </form>
+    </section>
 
     <script src="script.js"></script>
 </body>
