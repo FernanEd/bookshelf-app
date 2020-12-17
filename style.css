@@ -145,6 +145,11 @@ h1, h2, h3, h4, h5, h6{
     background-color:  var(--primary);
 }
 
+.btn-danger{
+    color: var(--light);
+    background-color:  var(--danger);
+}
+
 .btn{
     padding: 10px;
 
@@ -261,7 +266,7 @@ h1, h2, h3, h4, h5, h6{
 .book-item > .book-title{
     padding: 15px;
     display: grid;
-    grid-template-columns: auto 40px;
+    grid-template-columns: auto 80px;
     grid-template-areas:
         "title edit"
         "author author"
@@ -278,7 +283,8 @@ h1, h2, h3, h4, h5, h6{
 
 .book-title > .edit{
     grid-area: edit;
-    margin: auto;
+    display: flex;
+    justify-self: end;
 }
 
 .icon-btn{
@@ -298,6 +304,10 @@ h1, h2, h3, h4, h5, h6{
 
 .icon-btn:hover{
     color: var(--primary);
+}
+
+.remove-btn:hover{
+    color: var(--danger);
 }
 
 .icon-btn svg{
