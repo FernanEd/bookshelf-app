@@ -1,7 +1,11 @@
 let LISTED_BOOKS = [];
 
 if (!localStorage.getItem("library"))
+{
+    let HarryPoter = new Book("Harry Potter and the Philosopher's Stone", "J. K. Rowling", 309, true, 9780747532743);
+    addBook(HarryPoter);
     localStorage.setItem("library", JSON.stringify(LISTED_BOOKS))
+}
 else
     LISTED_BOOKS = JSON.parse(localStorage.getItem("library"));
 
@@ -14,8 +18,6 @@ function Book(title, author, pages, hasBeenRead, isbn){
 }
 
 
-let HarryPoter = new Book("Harry Potter and the Philosopher's Stone", "J. K. Rowling", 309, true, 9780747532743);
-addBook(HarryPoter);
 
 /*
 let LordRings = new Book("Lord of the Rings", "T. K Tolkien", 400, false);
