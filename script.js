@@ -13,10 +13,11 @@ function Book(title, author, pages, hasBeenRead, isbn){
     this.isbn = isbn;
 }
 
-/*
-let HarryPoter = new Book("Harry Potter", "J. K Rowling", 278, true, 9780747532743);
+
+let HarryPoter = new Book("Harry Potter and the Philosopher's Stone", "J. K. Rowling", 309, true, 9780747532743);
 addBook(HarryPoter);
 
+/*
 let LordRings = new Book("Lord of the Rings", "T. K Tolkien", 400, false);
 addBook(LordRings);
 */
